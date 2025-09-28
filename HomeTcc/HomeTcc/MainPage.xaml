@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeTcc.MainPage"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto,* ,Auto">
+
+        <Grid BackgroundColor="#2196F3" Padding="10" RowDefinitions="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="perfil.png"
+                  HeightRequest="40"
+                  WidthRequest="40"
+                  Aspect="AspectFill"
+                  Margin="5"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Start">
+                <Image.Clip>
+                    <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20" />
+                </Image.Clip>
+            </Image>
+
+
+            <Label Grid.Column="1"
+                   Text="Rafiq Aboarrage"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   TextColor="White"
+                   FontAttributes="Bold"/>
+
+            <Image Grid.Column="2"
+                   Source="seta.png"
+                   HeightRequest="20"
+                   WidthRequest="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"/>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+
+                <Label Text="Pesqueiros próximos"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"
+                       TextColor="Black"/>
+
+                <Grid ColumnDefinitions="*,Auto" Padding="5">
+                    <VerticalStackLayout>
+                        <Label Text="Pesqueiro Cantareira"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="4,3" VerticalOptions="Center"/>
+                            <Label Text="★★★★★" TextColor="Black" FontSize="14"/>
+                            <Label Text="(667)" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </VerticalStackLayout>
+
+                    <Grid Grid.Column="1">
+                        <Image Source="pesqueiro1.png"
+                               WidthRequest="80"
+                               HeightRequest="60"
+                               Aspect="AspectFill"/>
+                        <Label Text="1.627 fotos ou mais"
+                               BackgroundColor="Black"
+                               Opacity="0.6"
+                               TextColor="White"
+                               FontSize="10"
+                               HorizontalOptions="End"
+                               VerticalOptions="End"
+                               Padding="3"/>
+                    </Grid>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,Auto" Padding="5">
+                    <VerticalStackLayout>
+                        <Label Text="Pesqueiro do Arnaldão"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="4,3" VerticalOptions="Center"/>
+                            <Label Text="★★★★☆" TextColor="Black" FontSize="14"/>
+                            <Label Text="(988)" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </VerticalStackLayout>
+
+                    <Grid Grid.Column="1">
+                        <Image Source="pesqueiro2.png"
+                               WidthRequest="80"
+                               HeightRequest="60"
+                               Aspect="AspectFill"/>
+                        <Label Text="722 fotos ou mais"
+                               BackgroundColor="Black"
+                               Opacity="0.6"
+                               TextColor="White"
+                               FontSize="10"
+                               HorizontalOptions="End"
+                               VerticalOptions="End"
+                               Padding="3"/>
+                    </Grid>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="2" BackgroundColor="#2196F3" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+                <Image Source="mapa.png" WidthRequest="25" HeightRequest="25"/>
+                <Label Text="Próximos" FontSize="12" TextColor="White"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                <Image Source="buscar.png" WidthRequest="25" HeightRequest="25"/>
+                <Label Text="Buscar" FontSize="12" TextColor="White"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+                <Image Source="favoritos.png" WidthRequest="25" HeightRequest="25"/>
+                <Label Text="Favoritos" FontSize="12" TextColor="White"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
