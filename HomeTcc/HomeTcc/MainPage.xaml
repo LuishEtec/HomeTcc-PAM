@@ -25,7 +25,6 @@
                 </Image.Clip>
             </Image>
 
-
             <Label Grid.Column="1"
                    Text="Rafiq Aboarrage"
                    VerticalOptions="Center"
@@ -33,17 +32,51 @@
                    TextColor="White"
                    FontAttributes="Bold"/>
 
-            <Image Grid.Column="2"
+            <ImageButton Grid.Column="2"
                    Source="seta.png"
                    HeightRequest="20"
                    WidthRequest="20"
                    VerticalOptions="Center"
-                   HorizontalOptions="End"/>
+                   HorizontalOptions="End"
+                   Clicked="OnToggleMenu"/>
         </Grid>
 
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
+        <ScrollView x:Name="MenuSuspenso"
+                    Grid.Row="1"
+                    BackgroundColor="#2196F3"
+                    IsVisible="False">
+            <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+                <Image Source="perfil.png"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       Aspect="AspectFill">
+                    <Image.Clip>
+                        <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                    </Image.Clip>
+                </Image>
 
+                <Label Text="Rafiq Aboarrage"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="Center"/>
+
+                <Button Text="Editar suas informações"
+                        BackgroundColor="#64B5F6"
+                        TextColor="Black"/>
+
+                <Button Text="Mudar de conta"
+                        BackgroundColor="#64B5F6"
+                        TextColor="Black"/>
+
+                <Button Text="Sair"
+                        BackgroundColor="#64B5F6"
+                        TextColor="Black"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <ScrollView x:Name="ConteudoPrincipal" Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
                 <Label Text="Pesqueiros próximos"
                        FontSize="20"
                        FontAttributes="Bold"
